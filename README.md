@@ -1,15 +1,15 @@
 # symbnb
 
-### 1 Premiers pas mise en place de notre application Symfony 5
-### 2 Relations avec la base de données
-### 3 Notre premier Controller leAdController pour la gestion des annonces
-### 4 Symfony et les formulaires
-### 5 Les utilisateurs et l'authentification dans Symfony
-### 6 Intégration des utilisateurs dans le reste du site
-### 7 La sécurité et les autorisations dans Symfony 5
-### 8 Gérer les pages d'erreurs dans Symfony 5
-### 9 Gestion des réservations
-### 10 Gestion des commentaires et notations
+### 1 - Premiers pas mise en place de notre application Symfony 5
+### 2 - Relations avec la base de données
+### 3 - Notre premier Controller leAdController pour la gestion des annonces
+### 4 - Symfony et les formulaires
+### 5 - Les utilisateurs et l'authentification dans Symfony
+### 6 - Intégration des utilisateurs dans le reste du site
+### 7 - La sécurité et les autorisations dans Symfony 5
+### 8 - Gérer les pages d'erreurs dans Symfony 5
+### 9 - Gestion des réservations
+### 10 - Gestion des commentaires et notations
 
 # Screen
 
