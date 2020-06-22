@@ -1,0 +1,41 @@
+/* HEADER */
+
+div.ad-title {
+    padding: 2em;
+    background-size: cover;
+    background-position: center center;
+}
+
+div.ad-title h1,
+div.ad-title p {
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/* CONTENT */
+
+div.container {
+    margin-top: 50px;
+}
+
+div.carousel-caption {
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.avatar {
+    max-width: 128px;
+    max-height: 128px;
+    border-radius: 50%;
+}
+
+.avatar-medium {
+    max-width: 75px;
+    max-height: 75px;
+}
+
+.avatar-mini {
+    max-width: 24px;
+    max-height: 24px;
+}

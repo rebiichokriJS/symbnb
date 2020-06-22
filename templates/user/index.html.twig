@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page de {{ user.lastName }} {{ user.firstName }}{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-3 text-center">
+            <img src="{{user.picture}}" class="avatar mb-3" alt="avatar">
+            <br>
+            <span class="badge badge-primary">{{ user.ads | length }} annonces</span>
+        </div>
+        <div class="col-9">
+            <h1>{{ user.firstName }} {{ user.lastName }}</h1>
+            {% if user is same as(app.user) %}
+                <div class="mt-3">
+                    <a class="mr-3" href="{{ path('account_profile') }}">Modifier mes informations</a>
+                    <a class="mr-3" href="{{ path('account_password') }}">Modifier mon mot de passe</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    {{ user.description|raw }}
+    <hr>
+    <h2>Les annonces de {{ user.firstName }} {{ user.lastName }}</h2>
+    {% if user.ads | length > 0 %}
+    <div class="row">
+        {% for ad in user.ads %}
+        {% set url = path('ads_show', {'slug': ad.slug}) %}
+
+        <div class="col-md-4">
+            <div class="card bg-dark text-light shadow mt-4 mb-3">
+                <div class="card-header text-center">
+                    {{ ad.rooms }} chambres, <strong>{{ ad.price }}&euro; / nuit</strong> <br>
+                    <small>Pas encore noté</small>
+                </div>
+                <a href="{{ url }}">
+                    <img src="{{ ad.coverImage }}" alt="image de l'appartement"
+                        style="height: 200px; width: 100%; display: block;">
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="alert alert-warning">
+        <p>
+            <strong>{{ user.lastName }} {{ user.firstName }} n'a pas encore d'annonces !</strong>
+        </p>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

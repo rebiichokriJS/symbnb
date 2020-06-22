@@ -1,0 +1,46 @@
+security:
+    encoders:
+        App\Entity\User:
+            algorithm: auto
+            
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        in_memory: { memory: null }
+        in_database:
+            entity:
+                class: App\Entity\User
+                property: email
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: lazy
+
+            # ou symfony doit regarder pour trouver les utilisateurs du site
+            provider: in_database
+            # methode authentification avec un formulaire
+            form_login:
+                # chemin de la page de connexion
+                login_path: account_login
+                # chemin de verification authentification
+                check_path: account_login
+                
+            # on defini le logout
+            logout:
+                # on donne le name de la route de logout
+                path: account_logout
+                # on donne le chemin de redirection apres deconnexion
+                target: account_login
+
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#firewalls-authentication
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        # - { path: ^/admin, roles: ROLE_ADMIN }
+        # - { path: ^/profile, roles: ROLE_USER }
