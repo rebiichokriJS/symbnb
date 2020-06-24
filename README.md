@@ -2,7 +2,7 @@
 
 ### 1 - Premiers pas mise en place de notre application Symfony 5
 ### 2 - Relations avec la base de données
-### 3 - Notre premier Controller leAdController pour la gestion des annonces
+### 3 - Notre premier Controller le AdController pour la gestion des annonces
 ### 4 - Symfony et les formulaires
 ### 5 - Les utilisateurs et l'authentification dans Symfony
 ### 6 - Intégration des utilisateurs dans le reste du site
